@@ -1,1 +1,6 @@
-<p>calendar works!</p>
+<div *ngFor="let event of events" style="padding: 20px">
+    <div>Évènement: {{event.title}}</div>
+    <div>Heure: {{event.time}}</div>
+    <div>Type: {{event.type}}</div>
+  <a routerLink="/events/{{event.id}}">Details</a>
+</div>
