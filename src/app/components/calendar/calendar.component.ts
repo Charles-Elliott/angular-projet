@@ -13,15 +13,17 @@ export class CalendarComponent implements OnInit{
   eventType = ['Routine','Repas','Travail','Loisir'];
   constructor(private service: EventsService) {  }
 
+  //TODO.. les filtres
+
   ngOnInit(): void{
     this.service
       .fetchAllEvents()
       .subscribe(e => this.events = e);
   };
 
-  delete(event: Event): void {
+  delete(id: number): void {
     this.service
-      .removeEvent(event.id)
-        .subscribe();
+      .removeEvent(id)
+        .subscribe(success => this.events = this.events?.filter(e => e.id !== id));
   }
 }

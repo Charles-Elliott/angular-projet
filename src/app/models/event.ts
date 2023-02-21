@@ -3,6 +3,4 @@ export interface Event {
   title: string;
   time: number;
   type: string;
-
-
 }
