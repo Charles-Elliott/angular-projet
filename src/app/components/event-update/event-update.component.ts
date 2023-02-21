@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
-import { EventsService } from "../../services/events.service";
+import {EventsService} from "../../services/events.service";
 
 @Component({
-  selector: 'app-event-add',
-  templateUrl: './event-add.component.html',
-  styleUrls: ['./event-add.component.css']
+  selector: 'app-event-update',
+  templateUrl: './event-update.component.html',
+  styleUrls: ['./event-update.component.css']
 })
-export class EventAddComponent {
-
+export class EventUpdateComponent {
   constructor(private service: EventsService) {
   }
   eventType = ['Routine','Repas','Travail','Loisir'];
