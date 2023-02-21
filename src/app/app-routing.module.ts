@@ -8,7 +8,7 @@ const routes: Routes = [
   {path: "", redirectTo: "calendar", pathMatch: "full"},
   {path: "events", component: CalendarComponent},
   {path: "events/add", component: EventAddComponent},
-  {path: "events/update", component: EventUpdateComponent}
+  {path: "events/update/:id", component: EventUpdateComponent}
 
 ];
 

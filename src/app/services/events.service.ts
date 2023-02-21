@@ -25,7 +25,7 @@ export class EventsService {
     return this.http.post<Event>(this.myUrl, event, this.httpOptions);
   }
   updateEvent (id:number, event: Event): Observable<Event> {
-    return this.http.put<Event>(`${this.myUrl}/${id}`,event , this.httpOptions)
+    return this.http.put<Event>(`${this.myUrl}/${id}`, event, this.httpOptions)
   }
   removeEvent (id: number): Observable<Event> {
     return this.http.delete<Event>(`${this.myUrl}/${id}`, this.httpOptions);

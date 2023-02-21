@@ -1,8 +1,16 @@
+<!--<div>-->
+<!--  <label for="event-type-filter">Type d'évènement: </label>-->
+<!--    <select id="event-type-filter" type="text" [(ngModel)]="eventType">-->
+<!--      <option></option>-->
+<!--    </select>-->
+<!--</div>-->
 
 <div *ngFor="let event of events" style="padding: 10px">
   <div>Évènement: {{event.title}}</div>
   <div>Heure: {{event.time}}</div>
   <div>Type: {{event.type}}</div>
-  <div><a routerLink="events/update/{{event.id}}">Modifier</a></div>
-  <button type="button" class="btn-close" (click)="delete(event)">X</button>
+  <div>
+    <a routerLink="update/{{event.id}}">Modifier</a>
+    <button type="button" class="btn-close" (click)="delete(event.id)"></button>
+  </div>
 </div>
